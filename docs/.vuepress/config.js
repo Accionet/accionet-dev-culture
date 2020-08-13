@@ -1,118 +1,36 @@
 module.exports = {
-  title: 'Chinchay Docs',
+  title: 'Cultura Accionet',
   base: '/',
   themeConfig: {
-    nav: [
-      { text: 'Getting Started', link: '/gettingstarted/' },
-      { text: 'Docs', link: '/docs/' },
-      { text: 'The Model', link: '/models/' },
-      { text: 'Middleware', link: '/middleware/' },
-      { text: 'Error Handler', link: '/errorhandler/'},
-      { text: 'Collaborate!', link: '/collaborate/'}
-    ],
+    nav: [],
     displayAllHeaders: true,
     sidebar: {
-      '/gettingstarted/': [{
-        title: 'Getting Started',   // required
+      '/': [{
+        title: 'Git', 
         depth: 2,
-        path: '/gettingstarted/ejs',
+        path: '/git',
         children: []
       }, {
-        title: 'Getting Started: Chinchay + Angular',   // required
-        path: '/gettingstarted/angular',
+        title: 'Código de Calidad', 
+        path: '/code',
         children: []
       }, {
-        title: 'Getting Started: RESTful API',   // required
-        path: '/gettingstarted/apiMiddleware',
-        children: []
-      }],
-      '/docs/': [{
-        title: 'Overview: What is Chinchay?',   // required
-        path: '/docs/overview',
+        title: 'Metodología de Trabajo', 
+        path: '/work',
         children: []
       }, {
-        title: 'Command Line Interface',   // required
-        path: '/docs/cli',
+        title: 'Tecnologías', 
+        path: '/tech',
         children: []
       }, {
-        title: 'Chainfile',   // required
-        path: '/docs/chainfile',
+        title: 'Entorno de Desarrollo', 
+        path: '/ide',
         children: []
       }, {
-        title: 'Hateoas Generator',   // required
-        path: '/docs/hateoas',
+        title: 'Citas', 
+        path: '/quotes',
         children: []
-      }, {
-        title: 'The TableGateway Model',   // required
-        path: '/docs/model',
-        children: []
-      }, {
-        title: 'Chinchay Middleware',   // required
-        path: '/docs/middleware',
-        children: []
-      }, {
-        title: 'Error Handler: Manage http responses',   // required
-        path: '/docs/errorhandler',
-        children: []
-      }, {
-        title: 'API: Client Querying',   // required
-        path: '/docs/clientside',
-        children: []
-      }],
-      '/models/': [{
-        title: 'New',   // required
-        path: '/models/newsave',
-        children: []
-      }, {
-        title: 'Find',   // required
-        path: '/models/find',
-        children: []
-      }, {
-        title: 'Count',   // required
-        path: '/models/count',
-        children: []
-      }, {
-        title: 'Update',   // required
-        path: '/models/update',
-        children: []
-      }, {
-        title: 'Delete',   // required
-        path: '/models/delete',
-        children: []
-      }, {
-        title: 'Sum',   // required
-        path: '/models/sum',
-        children: []
-      }, {
-        title: 'Miscellaneous',   // required
-        path: '/models/miscellaneous',
-        children: []
-      }, {
-        title: 'Creating your own methods',   // required
-        path: '/models/customMethods',
-        children: []
-      }],
-      '/middleware/': [{
-        title: 'Access',   // required
-        path: '/middleware/access',
-        children: []
-      }, {
-        title: 'Middleware',   // required
-        path: '/middleware/middleware',
-        children: []
-      }], '/errorhandler/': [{
-        title: 'ChinchayError',   // required
-        path: '/errorhandler/chinchay-error',
-        children: []
-      }, {
-        title: 'ErrorHandler',   // required
-        path: '/errorhandler/error-handler',
-        children: []
-      }, {
-        title: 'GoodPractices',   // required
-        path: '/errorhandler/good-practices',
-        children: []
-      }] 
+      }]
     },
   },
 }
