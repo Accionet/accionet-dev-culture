@@ -182,6 +182,8 @@
 
 ## Linter
 
+  En Accionet se utiliza [ESLint](https://eslint.org/). Este nos permite definir un estilo de programación, es muy importante que todo el equipo utilize el mismo estilo, esto facilatará la compresión del código de otro miembro. El linter será responsable de ir indicando ciertos errores y advertencias. No podremos mergear una [Pull Request](/git.html#pull-request-code-review) si el linter está arrojando errores.
+
 ## Comentarios
 
 ## Logs
