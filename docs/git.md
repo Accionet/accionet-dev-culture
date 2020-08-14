@@ -157,7 +157,7 @@
 
 ### Cuándo
 
-  Una difícil pregunta, cuánto y cuándo commitear? Viendo parafraseando la respuesta a [esta](https://softwareengineering.stackexchange.com/questions/74764/how-often-should-i-do-you-make-commits) pregunta:
+  Una difícil pregunta: ¿cuánto y cuándo commitear? Viendo parafraseando la respuesta a [esta](https://softwareengineering.stackexchange.com/questions/74764/how-often-should-i-do-you-make-commits) pregunta:
 
   :::tip Cúanto Commitear
   Uno no debe hacer commits baso en tiempo, sino que basado en cuando uno agregó o bien arregló algo. Agregaste un método que funciona, arreglaste un typo, arreglaste cosas de estilo, etc. 
