@@ -157,7 +157,47 @@
 
 ### Cuándo
 
-### Cómo
+  Una difícil pregunta, cuánto y cuándo commitear? Viendo parafraseando la respuesta a [esta](https://softwareengineering.stackexchange.com/questions/74764/how-often-should-i-do-you-make-commits) pregunta:
+
+  :::tip Cúanto Commitear
+  Uno no debe hacer commits baso en tiempo, sino que basado en cuando uno agregó o bien arregló algo. Agregaste un método que funciona, arreglaste un typo, arreglaste cosas de estilo, etc. 
+  :::
+
+  Como regla general los commits deben ser atómicos, deben englobar un solo cambio. Yo suelo hacer la analogía cuando uno esta trabajando en un archivo Word y decide apretar el botón *save*. Hacer un commit es equivalente a apretar *save*, uno no apreta save cada vez que uno ingresa una letra pero tampoco uno escribe un ensayo de 5 planas sin apretar *save*.  
 
 
+### Formato
 
+Cada commit debe tener un mensaje, si bien en git esto es opcional, ¡en Accionet es obligatorio! Este mensaje debe explicar el cambio que se hizo. Accionet sigue la [guía](https://la-guia.platan.us/herramientas/git) de platanus sobre commits.
+
+Pero en concreto, deben ser en inglés, no muy largos y tener el siguiente formato:
+
+
+```
+  tipo(contexto): descripción
+```
+
+#### Tipo
+El tipo corresponde a que se debe el commit:
+
+  * feat: Un nuevo feature
+  * fix: La corrección de un bug
+  * docs: Cambios en la documentación
+  * style: Cambios que no afectan el significado del código (espacios, indentación, etc.)
+  * refactor: Un cambio en el código que no agrega una funcionalidad ni corrige un bug
+  * perf Cambios en el código que sólo mejoran la performance
+  * test: Agrega, corrige o mejora tests
+  * chore: Cambios al proceso de build y herramientas auxiliares
+
+
+#### Contexto
+
+Funcionalidad que en global el commit. Opcionalmente se puede agregar un `/` para indicar el archivo o componente dónde fue el cambio: 
+
+```
+  tipo(contexto/componente): descripción
+```
+
+#### Descripción
+
+Descripción, no muy larga, de lo que el commit hace. Recordar, siempre en inglés!
