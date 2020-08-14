@@ -196,5 +196,20 @@
 
 ## Logs
 
+  En producción no deben haber `console.log()`. Por dos razones: 
+
+  1. Es lento imprimir a la consola.
+  2. Los logs pueden exponer información sensible.
+
+  Sin embargo los logs tienen un uso importante en Accionet, pero se deben utilizar a través de una alerta de `codemaster`:
+
+  ```javascript
+    const codemaster = require('codemaster');
+
+    codemaster.alert.print('esto es una alerta');
+  ```
+
+  Todos los servidores de Accionet están configurados de tal manera que se mande una notificación vía email cada vez que se imprime una alerta. Usar sabiamente las alerta para poder monitorear la salud de los servidores, ser notificados frente a bugs inesperados y contar con la información necesaria para poder debuggear. 
+
 ## Tests
 
