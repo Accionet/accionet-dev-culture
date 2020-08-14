@@ -186,6 +186,14 @@
 
 ## Comentarios
 
+  Esto es algo muy controversial, ¿se debe comentar el código? En Accionet desincentivamos el uso de comentarios, es preferible un código sin cometarios que uno con. Esto es un concepto contra-intuitivo, los comentarios ayudan a entender mejor el código ¿por qué vetar su uso?
+
+  * **"El código nunca mienta, los comentarios a veces si"** Es muy común encontrarse con comentarios desactualizados, esto puede llevar a confusión. Los comentarios requieren un trabajo muy prolijo de mantención, en la practica esto rara vez ocurre, por ende mejor evitarlos.
+  * **"El código es cómo un chiste, si hay que explicarlo es malo"** Un buen código no debiese requerir de comentarios. Si no se entiende por si solo es un indicio de que se debe reescribir o modificar.
+
+  Dicho todo lo anterior, hay excepciones pero son las menos. Un clásico contra ejemplo son casos bordes no esperables, aveces uno debe agregar un código para cubrir un caso borde no obvio, por muy auto-explicativo puede requerir un comentario para ponerlo en contexto.
+  
+
 ## Logs
 
 ## Tests
