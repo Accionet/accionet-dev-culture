@@ -160,6 +160,26 @@
   
 ## Usar Variables
 
+  Esto puede sonar como obvio, pero es muy importante evitar el uso de variables no definidas. Supongamos que queremos calcular la energía potencial gravitacional, nos podemos ver tentado a escribir lo siguiente:
+
+  ```javascript
+  const calculateGravitationPotentialEnergy = (mass, height) => {
+    return mass * 10 * height;
+  }
+  ```
+
+  ¿El problema? 
+
+  Para partir si no estamos familiarizados con la formula no tenemos por qué asumir que 10 hace alusión a la gravedad. Segundo ¿qué pasa si decidimos usar 9.8 en vez de 10? Tendríamos que entrar a bucear en el código buscando cada vez que usamos la gravedad y cambiarla manual, suena a posible error. Mejor guardarlo una vez en una variable global:
+
+  ```javascript
+  const GRAVITY = 10;
+  
+  const calculateGravitationPotentialEnergy = (mass, height) => {
+    return mass * GRAVITY * height;
+  }
+  ```
+
 ## Linter
 
 ## Comentarios
