@@ -213,3 +213,57 @@
 
 ## Tests
 
+  ### ¿Por qué testear?
+
+  En un software es muy importante que sea flexible, que se le puedan agregar y/o modificar funcionalidades. Sin embargo cuando tenemos un código en producción el riesgo de agregar algo y que se rompa todo es gigantesco. Los tests nos permiten ir verificando que todo siga funcionando correctamente. 
+
+  ### Qué Tests Hacer
+
+  Existe tres tipos de tests:
+
+  * Test Unitarios: Son test atómicos. Deben revisar que un método haga lo esperado.
+  * Test Integración: Estos tests son de más alto nivel y buscan revisar que la interacción entre distintas partes del código funcionen bien.
+  * Test Funcionales: Estos ya se preocupan más de la funcionalidad que del código. Revisa que el software haga lo esperado.
+
+  En Accionet los desarrolladores son los responsables de hacer los tests unitarios y los tests de integración. [Continuous Integration](/git.html#continuous-integration) va a revisar que estos tests pasen para permitir mergear una [Pull Request](/git.html#pull-request-code-review).
+
+ ### Cómo 
+
+  A la hora de hacer tests uno debe preocuparse que todos los caminos estén cubiertos. Es decir, que entre a cada if, else if, else, a cada loop, a cada switch etc.
+
+  Lo segundo que uno debe preocuparse son los parámetros. Por ejemplo:
+
+  ```javascript
+    const openEachWindow = (house) => {
+      for(let i = 0; i < house.windows.length; i++) {
+        const window = house.windows[i];
+        window.open();
+      }
+    }
+  ```
+
+  ¿Qué pasa si `house` es null? ¿Qué pasa si `house.windows` es null?
+
+  Otro elemento importante es pensar en casos bordes y posibles errores que puedan surgir. Por ejemplo: 
+  
+  ```javascript
+    const calculateHousesPerTrees = (houses, trees) => {
+      return houses.length / trees.length;
+    }
+  ```
+
+  ¿Qué pasa si `trees` es un arreglo vacío (length = 0)?
+
+ ### Dónde
+
+  Los tests se guardan en el directorio `/test/integration-unit-testing`. La estructura de los archivo debe emular a la del servidor. Es decir, los tests del método `openMainDoor()`, del archivo `/server/models/house`, deben ser escritos en el archivo `/test/integration-unit-testing/server/models/house/openMainDoor.js`.
+
+
+ ### Cobertura 
+
+ Para medir que los tests tengan una cobertura adecuada, [Continuous Integration](/git.html#continuous-integration) va a revisar que % de las líneas de código, de las funciones, de las branches y de los statements están siendo testeadas.
+
+
+  ### Método intesteable
+
+  Si en algún momento te encuentras frente a un método y llegas a la conclusión "este método es imposible de testear", esto significa que ese método debe ser sub dividido en métodos más simples y fáciles de testear.
