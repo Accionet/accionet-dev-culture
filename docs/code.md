@@ -80,7 +80,85 @@
 
   Los nombres de los arreglos deben ser en plural. `students.forEach((student) => {... })`;
 
+
+
+  ### Conclusión
+
+  Como conclusión, al programar hay que intentar de imitar el lenguaje natural. Esto va a facilitar la lectura y comprensibilidad del código ¡Tómate un minuto para pensar los nombres!
+
+
 ## Cases
+
+  Lo más importante con los cases es ser consistentes, esta consistencia muchas veces depende del lenguaje, es decir distintos lenguajes usan distintos cases, Existen distintos tipos de cases:
+
+  * camelCase
+  * PascalCase
+  * TRAIN-CASE
+  * snake_case
+  * kebab-case
+  * MACRO_CASE
+
+
+  ### Variables y Funciones
+
+  En javascript las variables y funciones se escriben en camelCase. 
+
+  ### Constantes Globales
+
+  Las variables que son una constante "global" se escriben en MACRO_CASE. No confundir con variables definidas con `const`, por constante global nos referimos a variables cuyo valor es una verdad absoluta, está fijo, jamás será cambiado y, normalmente, no depende de parámetros. Por lo general estas constantes son declaradas al comienzo del archivo.
+
+  #### No Hacer
+
+  ```javascript
+  const STUDENT_NAME = getStudentName(studentId);
+  ```
+
+  Si bien `STUDENT_NAME` es una constante y que no va a ser cambiada, depende de parametros y no es una constante "global", por ende debería estar en camelCase.
+
+  #### Hacer
+
+  ```javascript
+  const GRAVITY = 9.8;
+  const TIMEOUT = 5000;
+  const ONE_DAY = 24 * 60 * 60 * 1000;
+  ```
+
+  En todos estos casos estas variables son "verdades absolutas".
+
+  ### Clases
+
+  Las clases se declaran en PascalCase y las instancias en camelCase:
+
+  ```javascript
+  class VikingWarrior { .... }
+
+  const ragnarLothbrok = new VikingWarrior();
+  ```
+
+  ### Archivos
+
+  En Accionet se ha optado por usar kebab-case para los archivos y directorios. Esta resolución es relativamente reciente, por lo que varios archivos están en camelCase.
+
+
+  ### BBDD
+
+  Por lo general las base de datos, y en particular postgreSQL, no son case sensitive, por lo que camelCase no es opción. La convensión que usamos en Accionet es usar snake_case. 
+ 
+
+  ### Propiedades de JSON - Javascript Objects
+
+  Si bien acá no existe una convención general y depende del caso, en Accionet preferimos camelCase. Sin embargo, existen varias excepciones, por ejemplo cuando el objeto representa una entrada de la base de datos, el case correcto sería snake_case para ser consistente con la BB.DD.
+
+  ### css y html
+
+  Las variables de css y html se escriben con kebab-case.
+
+  ### Variables de Entorno
+
+  Las variables de entorno por naturaleza son Constantes Globales, por ende se deben escribir en MACRO_CASE.
+
+  
+## Usar Variables
 
 ## Linter
 
