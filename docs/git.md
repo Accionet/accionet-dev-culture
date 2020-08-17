@@ -122,11 +122,82 @@
 
 ## Pull Request + Code Review
 
+  Para pasar código a `master` y a `dev` siempre lo hacemos a través de Pull Request. Esto nos permite tener control de que no cualquier basura llegue a las branches principales, poniendo reglas, tanto subjetivas cómo objetivas, que nos permitan revisar si cómo equipo aceptamos el cambio o no.
+
+  ### Continuous Integration
+
+  Esto se suele llamar Integración Continua. Citando a [wikipedia](https://es.wikipedia.org/wiki/Integraci%C3%B3n_continua):
+
+  :::tip Integración Continua
+  Es una práctica de ingeniería de software que consiste en hacer integraciones automáticas de un proyecto lo más a menudo posible para así poder detectar fallos cuanto antes. Entendemos por integración la compilación y ejecución de pruebas de todo un proyecto
+  :::
+
+  En concreto, cada vez que se sube un commit a github, se revisan lo siguiente:
+
+  * Test: Revisa que todos los tests pasen. Esto permite detectar fallos tempranamente.
+  * Coverage: Cobertura de los tests. Accionet exige un mínimo de cobertura que los tests deben tener. No sirve tener tests si estos no cubren todos los casos.
+  * Linter: Revisa los errores de sintaxis y estilo del código. Se permiten `warnings` pero no `errors`. Más información sobre el linter [acá](/code.html#linter).
+
+  Si alguno de estos arroja un error, no dejará mergear la Pull Request hasta que el error haya sido arreglado. De esta forma nos aseguramos que nuestro código mantenga unos estándares mínimos.
+
+  ### Branch Actualizada
+
+  Además de las condiciones de Continuous Integration, la branch que se está comparando (es decir la que se busca mergear) debe estar al día con la branch base. Es decir todos los commits de la branch base deben estar en la branch comparada.
+
+  ### Code Review
+
+  Todas las reglas anteriores son objetivas, es decir cumple o no cumple. Hay una última condición que es subjetiva y muy importante: Code Review. Un miembro del equipo debe darle el "visto bueno" a la Pull Request, es decir debe revisar el código que se busca agregar y revisar que sea fácil de comprender, que no tenga fallas ni [code smells](https://en.wikipedia.org/wiki/Code_smell#:~:text=In%20computer%20programming%2C%20a%20code,%2C%20developer%2C%20and%20development%20methodology.&text=It%20is%20also%20a%20term%20used%20by%20agile%20programmers.). Esta es una buenísima oportunidad, para tanto el revisador como para el revisado, para aprender el uno y del otro.
+
+  ### Cada Cuanto Hacer una Pull Request
+
+  Hacerle Code Review a una Pull Request muy larga es un infierno. Por lo mismo las Pull Requests deben ser periódicas, concisas y cortas. Pero esto no se debe forzar, una Pull Request indica que la funcionalidad en cuestión está lista, jamás hacer una Pull Request si la funcionalidad todavía no está lista. Debe hacerse un trabajo conjunto por parte de todo el equipo para dividir las funcionalidades grandes en pequeñas funcionalidad e ir armando de a poco, con varias Pull Requests.
+
+
 ## Commits
 
 ### Cuándo
 
-### Cómo
+  Una difícil pregunta: ¿cuánto y cuándo commitear? Viendo parafraseando la respuesta a [esta](https://softwareengineering.stackexchange.com/questions/74764/how-often-should-i-do-you-make-commits) pregunta:
+
+  :::tip Cúanto Commitear
+  Uno no debe hacer commits baso en tiempo, sino que basado en cuando uno agregó o bien arregló algo. Agregaste un método que funciona, arreglaste un typo, arreglaste cosas de estilo, etc. 
+  :::
+
+  Como regla general los commits deben ser atómicos, deben englobar un solo cambio. Yo suelo hacer la analogía cuando uno esta trabajando en un archivo Word y decide apretar el botón *save*. Hacer un commit es equivalente a apretar *save*, uno no apreta save cada vez que uno ingresa una letra pero tampoco uno escribe un ensayo de 5 planas sin apretar *save*.  
 
 
+### Formato
 
+Cada commit debe tener un mensaje, si bien en git esto es opcional, ¡en Accionet es obligatorio! Este mensaje debe explicar el cambio que se hizo. Accionet sigue la [guía](https://la-guia.platan.us/herramientas/git) de platanus sobre commits.
+
+Pero en concreto, deben ser en inglés, no muy largos y tener el siguiente formato:
+
+
+```
+  tipo(contexto): descripción
+```
+
+#### Tipo
+El tipo corresponde a que se debe el commit:
+
+  * feat: Un nuevo feature
+  * fix: La corrección de un bug
+  * docs: Cambios en la documentación
+  * style: Cambios que no afectan el significado del código (espacios, indentación, etc.)
+  * refactor: Un cambio en el código que no agrega una funcionalidad ni corrige un bug
+  * perf Cambios en el código que sólo mejoran la performance
+  * test: Agrega, corrige o mejora tests
+  * chore: Cambios al proceso de build y herramientas auxiliares
+
+
+#### Contexto
+
+Funcionalidad que en global el commit. Opcionalmente se puede agregar un `/` para indicar el archivo o componente dónde fue el cambio: 
+
+```
+  tipo(contexto/componente): descripción
+```
+
+#### Descripción
+
+Descripción, no muy larga, de lo que el commit hace. Recordar, siempre en inglés!
