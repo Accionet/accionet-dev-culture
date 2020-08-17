@@ -1,4 +1,3 @@
-![Chinchay](https://chinchay-docs.herokuapp.com/assets/logo.png)
 
 ### Bienvenidos a la Cultura Accionet
 
