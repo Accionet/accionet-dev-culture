@@ -1,4 +1,4 @@
-## Node.js + Express
+## Node.js + Express.js
 
 El backend es desarrollado en Node.js. Se utiliza el framework Express para gestionar las interacciones web.
 
