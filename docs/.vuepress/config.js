@@ -1,6 +1,6 @@
 module.exports = {
   title: 'Cultura Accionet',
-  base: '/',
+  base: '/accionet-dev-culture/',
   themeConfig: {
     nav: [],
     displayAllHeaders: true,
