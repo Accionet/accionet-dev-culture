@@ -21,6 +21,23 @@
   ```
 
 
+## TSLint
+
+##### eg2.tslint
+Esta extensión cumple la misma función que ESLint pero para los archivos de typescript, en nuestro caso para Angular. Notar que la versión que usamos está deprecada, sin embargo funciona mejor que la no deprecada por lo que seguimos usando esa. Al igual que antes se recomienda configurarlo para que haga un auto-fix cada vez que se guarda el archivo.
+
+Para esto abrir el Command Palette y correr:
+```
+Open Settings (JSON)
+```
+
+Agregar la siguiente configuración:
+
+```JSON
+  "tslint.autoFixOnSave": true,
+```
+
+
 ## Code Spell Checker 
 
   ##### streetsidesoftware.code-spell-checker
@@ -66,4 +83,79 @@ Snippet para Angular.
 ##### abusaidm.html-snippets
 
 Snippet para HTML5.
+
+
+## Mis Settings
+
+
+A continuación una lista de un ejemplo de configuraciones usadas en Accionet:
+
+```JSON
+{
+    "editor.overviewRulerBorder": false,
+    "javascript.autoClosingTags": false,
+    "javascript.format.enable": false,
+    "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+    "javascript.format.insertSpaceAfterSemicolonInForStatements": false,
+    "javascript.format.insertSpaceBeforeAndAfterBinaryOperators": false,
+    "typescript.validate.enable": false,
+    "typescript.surveys.enabled": false,
+    "typescript.suggest.paths": false,
+    "typescript.suggest.completeJSDocs": false,
+    "typescript.suggestionActions.enabled": false,
+    "typescript.suggest.enabled": false,
+    "typescript.reportStyleChecksAsWarnings": false,
+    "typescript.suggest.autoImports": false,
+    "typescript.preferences.renameShorthandProperties": false,
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.enableExperiments": false,
+    "editor.minimap.enabled": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "window.zoomLevel": 0,
+    "editor.tabSize": 2,
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#1A1A1A",
+        "statusBar.noFolderBackground": "#212121",
+        "statusBar.debuggingBackground": "#263238"
+    },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "git.enableSmartCommit": true,
+    "[python]": {},
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true,
+    },
+    "tslint.autoFixOnSave": true,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "cSpell.userWords": [
+        "Meraki",
+        "Remarketing",
+        "accionet",
+        "behaviour",
+        "chinchay",
+        "configurarlo",
+        "echarts",
+        "envato",
+        "guayo",
+        "hateoas",
+        "iterador",
+        "meeseeks",
+        "postgres",
+        "psql",
+        "pyme",
+        "requestify",
+        "shopify",
+        "vuepress",
+        "webkul"
+    ],
+    "cSpell.allowCompoundWords": true,
+    "cSpell.language": "en, es",
+    "nasc-touchbar.addCursorBelow": false,
+    "nasc-touchbar.commentLine": true,
+    "nasc-touchbar.jumpToBracket": true,
+    "nasc-touchbar.goToDefinition": false,
+    "nasc-touchbar.nextInFiles": true,
+    "nasc-touchbar.rename": false
+}
+```
 
