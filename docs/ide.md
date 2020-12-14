@@ -7,6 +7,20 @@
   ##### dbaeumer.vscode-eslint
   Esta es la extensión más útil. En tiempo real va subrayando los errores y advertencias al programar. Esto permite ir arreglandolas apenas ocurren. Se recomienda configurarlo para que haga un auto-fix cada vez que se guarda el archivo.
 
+  Para esto abrir el Command Palette y correr:
+  ```
+  Open Settings (JSON)
+  ```
+
+  Agregar la siguiente configuración:
+
+  ```JSON
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true,
+    },
+  ```
+
+
 ## Code Spell Checker 
 
   ##### streetsidesoftware.code-spell-checker
