@@ -41,7 +41,11 @@ Agregar la siguiente configuración:
 ## Code Spell Checker 
 
   ##### streetsidesoftware.code-spell-checker
-  Este subraya los errores de tipografía. Se recomienda instalar la extensión tanto de español como en inglés. Para que tome los dos idiomas en settings de Code Spell Checker > User > Languages colocar:
+  ##### streetsidesoftware.code-spell-checker-spanish
+
+  Este subraya los errores de ortografía. Se recomienda instalar la extensión tanto de español como en inglés. Es decir instalar tanto **streetsidesoftware.code-spell-checker** como **streetsidesoftware.code-spell-checker-spanish**
+
+  Para que tome los dos idiomas en settings de Code Spell Checker > User > Languages colocar:
 
   ```
   en, es
