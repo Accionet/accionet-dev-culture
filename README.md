@@ -18,3 +18,8 @@ npm run docs:build
 ```
 npm run start
 ```
+
+
+# Deploy 
+
+correr archivo `deploy.sh`
