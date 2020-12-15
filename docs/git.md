@@ -201,3 +201,73 @@ Funcionalidad que en global el commit. Opcionalmente se puede agregar un `/` par
 #### Descripción
 
 Descripción, no muy larga, de lo que el commit hace. Recordar, siempre en inglés!
+
+
+## Git Aliases
+
+¿No encuentran verboso que cada vez que tenemos que commitear tengamos que hacer `git add .` y después `git commit -m 'type(contexto): descripcion'`?
+
+La solución: [git alias](https://www.atlassian.com/es/git/tutorials/git-alias). Los alias se usan para crear comandos más cortos que se asignan a comandos más largos. Si corres el siguiente comando:
+
+```
+git config --global alias.ac "! git add -A && git commit -m"
+```
+
+Después puedes hacer:
+
+```
+git ac 'type(contexto): descripcion'
+```
+
+Y hará tanto el  `git add .` como el `git commit -m 'type(contexto): descripcion'`.
+
+A continuación una lista de aliases que usamos en accionet:
+
+
+### git update-dev
+
+Para actualizar la branch dev:
+
+```
+git config --global alias.update-dev "! git checkout dev && git pull origin dev"
+```
+
+### git update-master
+
+Para actualizar la branch master:
+
+```
+git config --global alias.update-master "! git checkout master && git pull origin master"
+```
+
+### git da
+
+Elimina todas las branches mergeadas exceptuando master y dev:
+
+```
+git config --global alias.da "! git branch | grep -v "master\|dev" | xargs git branch -d"
+```
+
+### git da
+
+Elimina todas las branches mergeadas exceptuando master y dev:
+
+```
+git config --global alias.da "! git branch | grep -v "master\|dev" | xargs git branch -d"
+```
+
+### git alias
+
+Para ver todos los alias que has creado
+
+```
+git config --global alias.da "! git config --get-regexp ^alias\. | sed -e s/^alias\.// -e s/\ /\ =\ /"
+```
+
+### git ac
+
+El primero que vimos, para agregar y commitear en un solo comando.
+
+```
+git config --global alias.ac "! git add -A && git commit -m"
+```
