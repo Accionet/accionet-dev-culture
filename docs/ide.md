@@ -56,17 +56,20 @@ Agregar la siguiente configuración:
 ### Auto Import
 
 ##### steoates.autoimport
+
 Te sugiere para auto-importar módulos.
 
 ### Git Blame
 
 ##### waderyan.gitblame
-En la barra inferior indica quien fue el último es editar la línea del código y hace cuanto.
+
+En la barra inferior indica quién fue el último es editar la línea del código y hace cuánto.
 
 
 ### Bracket Pair Colorizer
 
 ##### coenraads.bracket-pair-colorizer
+
 Pinta del mismo color cada pareja de brackets, ayuda a entender cuándo falta o sobra un bracket. 
 
 
@@ -82,11 +85,45 @@ Al apretar `Shift` + `Alt` + `b` te abre el archivo HTML seleccionado en el nave
 
 Snippet para Angular.
 
+### Angular Language Service
+
+##### angular.ng-template
+
+Permite autocompletar cosas del component.ts en el component.html.
+
 ### HTML Snippets
 
 ##### abusaidm.html-snippets
 
 Snippet para HTML5.
+
+### Live Share
+
+##### ms-vsliveshare.vsliveshare
+
+Permite compartir tu visual studio code para que otros lo puedan ver y editar. En otras palabras tu vscode se transforma en un google docs.
+
+### Nasc VSCode Touchbar
+
+##### felipe.nasc-touchbar
+
+[SOLO PARA iOS con touchbar] Permite configurar el touchbar para agregar funcionalidades de vscode. La configuración más común en Accionet es:
+
+Abrir el Command Palette y correr:
+```
+Open Settings (JSON)
+```
+
+Agregar la siguiente configuración:
+
+```JSON
+  "nasc-touchbar.addCursorBelow": false,
+  "nasc-touchbar.commentLine": true,
+  "nasc-touchbar.jumpToBracket": true,
+  "nasc-touchbar.goToDefinition": false,
+  "nasc-touchbar.nextInFiles": true,
+  "nasc-touchbar.rename": false,
+```
 
 
 ## Mis Settings
@@ -103,20 +140,11 @@ A continuación una lista de un ejemplo de configuraciones usadas en Accionet:
     "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
     "javascript.format.insertSpaceAfterSemicolonInForStatements": false,
     "javascript.format.insertSpaceBeforeAndAfterBinaryOperators": false,
-    "typescript.validate.enable": false,
-    "typescript.surveys.enabled": false,
-    "typescript.suggest.paths": false,
-    "typescript.suggest.completeJSDocs": false,
-    "typescript.suggestionActions.enabled": false,
-    "typescript.suggest.enabled": false,
-    "typescript.reportStyleChecksAsWarnings": false,
-    "typescript.suggest.autoImports": false,
-    "typescript.preferences.renameShorthandProperties": false,
     "workbench.startupEditor": "newUntitledFile",
     "workbench.enableExperiments": false,
     "editor.minimap.enabled": false,
     "editor.multiCursorModifier": "ctrlCmd",
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 1,
     "editor.tabSize": 2,
     "workbench.colorCustomizations": {
         "statusBar.background": "#1A1A1A",
@@ -159,7 +187,10 @@ A continuación una lista de un ejemplo de configuraciones usadas en Accionet:
     "nasc-touchbar.jumpToBracket": true,
     "nasc-touchbar.goToDefinition": false,
     "nasc-touchbar.nextInFiles": true,
-    "nasc-touchbar.rename": false
+    "nasc-touchbar.rename": false,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "liveshare.presence": true
 }
 ```
 
