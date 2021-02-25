@@ -51,6 +51,13 @@ Agregar la siguiente configuración:
   en, es
   ```
 
+## Htmlhint 
+
+  ##### mkaufman.htmlhint
+
+  Es muy similar a eslint y tslint pero para los archivos html.
+
+
 ## Otros
 
 ### Auto Import
