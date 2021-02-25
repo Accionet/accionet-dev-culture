@@ -72,7 +72,7 @@ Para esto abrir el Command Palette y correr:
 
  Luego agregamos:
   ```JSON
-      "beautify.language": {
+    "beautify.language": {
         "js": [],
         "css": [
             "css",
