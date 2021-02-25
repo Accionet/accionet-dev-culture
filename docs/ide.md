@@ -57,6 +57,43 @@ Agregar la siguiente configuración:
 
   Es muy similar a eslint y tslint pero para los archivos html.
 
+## Beautify 
+
+  ##### hookyqr.beautify
+
+  Es muy similar a htmlhint pero este se encarga de cosas de estilo, es decir de hacer que el código se vea "bonito". Revisa indentación, espacios, etc.  
+
+  Para que solo revise los archivos html y css (los archivos js los revisa eslint y/o tslint) debemos abrir el Command Palette y correr:
+
+Para esto abrir el Command Palette y correr:
+  ```
+  Open Settings (JSON)
+  ```
+
+ Luego agregamos:
+  ```JSON
+      "beautify.language": {
+        "js": [],
+        "css": [
+            "css",
+            "scss"
+        ],
+        "html": [
+            "htm",
+            "html"
+        ]
+    }
+  ```
+
+  Si queremos que se arreglen los archivos automáticamente cuando guardamos, agregar:
+
+  ```JSON
+    "editor.formatOnSave": true,
+    "[html]": {
+        "editor.defaultFormatter": "HookyQR.beautify"
+    },
+  ```
+
 
 ## Otros
 
@@ -151,7 +188,6 @@ A continuación una lista de un ejemplo de configuraciones usadas en Accionet:
     "workbench.enableExperiments": false,
     "editor.minimap.enabled": false,
     "editor.multiCursorModifier": "ctrlCmd",
-    "window.zoomLevel": 1,
     "editor.tabSize": 2,
     "workbench.colorCustomizations": {
         "statusBar.background": "#1A1A1A",
@@ -177,8 +213,11 @@ A continuación una lista de un ejemplo de configuraciones usadas en Accionet:
         "envato",
         "guayo",
         "hateoas",
+        "indentaci",
+        "indentación",
         "iterador",
         "meeseeks",
+        "n",
         "postgres",
         "psql",
         "pyme",
@@ -197,7 +236,23 @@ A continuación una lista de un ejemplo de configuraciones usadas en Accionet:
     "nasc-touchbar.rename": false,
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "liveshare.presence": true
+    "liveshare.presence": true,
+    "window.zoomLevel": 1,
+    "editor.formatOnSave": true,
+    "[html]": {
+        "editor.defaultFormatter": "HookyQR.beautify"
+    },
+    "beautify.language": {
+        "js": [],
+        "css": [
+            "css",
+            "scss"
+        ],
+        "html": [
+            "htm",
+            "html"
+        ]
+    }
 }
 ```
 
