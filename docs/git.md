@@ -248,14 +248,6 @@ Elimina todas las branches mergeadas exceptuando master y dev:
 git config --global alias.da "! git branch | grep -v "master\|dev" | xargs git branch -d"
 ```
 
-### git da
-
-Elimina todas las branches mergeadas exceptuando master y dev:
-
-```
-git config --global alias.da "! git branch | grep -v "master\|dev" | xargs git branch -d"
-```
-
 ### git alias
 
 Para ver todos los alias que has creado
