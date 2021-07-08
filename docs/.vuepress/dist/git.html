@@ -7,7 +7,7 @@
     <meta name="generator" content="VuePress 1.5.2">
     
     <meta name="description" content="">
-    <link rel="preload" href="/assets/css/0.styles.ab30e0ca.css" as="style"><link rel="preload" href="/assets/js/app.a6b2cf8e.js" as="script"><link rel="preload" href="/assets/js/2.3f720234.js" as="script"><link rel="preload" href="/assets/js/7.0f7887e4.js" as="script"><link rel="prefetch" href="/assets/js/10.605497f4.js"><link rel="prefetch" href="/assets/js/11.29750c99.js"><link rel="prefetch" href="/assets/js/3.10735ff3.js"><link rel="prefetch" href="/assets/js/4.1b09c2c5.js"><link rel="prefetch" href="/assets/js/5.65d7b090.js"><link rel="prefetch" href="/assets/js/6.503af870.js"><link rel="prefetch" href="/assets/js/8.a161ec9a.js"><link rel="prefetch" href="/assets/js/9.aa779337.js">
+    <link rel="preload" href="/assets/css/0.styles.ab30e0ca.css" as="style"><link rel="preload" href="/assets/js/app.9a5c52d7.js" as="script"><link rel="preload" href="/assets/js/2.3f720234.js" as="script"><link rel="preload" href="/assets/js/7.3289f2a0.js" as="script"><link rel="prefetch" href="/assets/js/10.605497f4.js"><link rel="prefetch" href="/assets/js/11.69b2be8e.js"><link rel="prefetch" href="/assets/js/3.10735ff3.js"><link rel="prefetch" href="/assets/js/4.1b09c2c5.js"><link rel="prefetch" href="/assets/js/5.be317edb.js"><link rel="prefetch" href="/assets/js/6.503af870.js"><link rel="prefetch" href="/assets/js/8.f392b20a.js"><link rel="prefetch" href="/assets/js/9.9fa454bc.js">
     <link rel="stylesheet" href="/assets/css/0.styles.ab30e0ca.css">
   </head>
   <body>
@@ -28,7 +28,6 @@
 </code></pre></div><p>Y hará tanto el  <code>git add .</code> como el <code>git commit -m 'type(contexto): descripcion'</code>.</p> <p>A continuación una lista de aliases que usamos en accionet:</p> <h3 id="git-update-dev"><a href="#git-update-dev" class="header-anchor">#</a> git update-dev</h3> <p>Para actualizar la branch dev:</p> <div class="language- extra-class"><pre class="language-text"><code>git config --global alias.update-dev &quot;! git checkout dev &amp;&amp; git pull origin dev&quot;
 </code></pre></div><h3 id="git-update-master"><a href="#git-update-master" class="header-anchor">#</a> git update-master</h3> <p>Para actualizar la branch master:</p> <div class="language- extra-class"><pre class="language-text"><code>git config --global alias.update-master &quot;! git checkout master &amp;&amp; git pull origin master&quot;
 </code></pre></div><h3 id="git-da"><a href="#git-da" class="header-anchor">#</a> git da</h3> <p>Elimina todas las branches mergeadas exceptuando master y dev:</p> <div class="language- extra-class"><pre class="language-text"><code>git config --global alias.da &quot;! git branch | grep -v &quot;master\|dev&quot; | xargs git branch -d&quot;
-</code></pre></div><h3 id="git-da-2"><a href="#git-da-2" class="header-anchor">#</a> git da</h3> <p>Elimina todas las branches mergeadas exceptuando master y dev:</p> <div class="language- extra-class"><pre class="language-text"><code>git config --global alias.da &quot;! git branch | grep -v &quot;master\|dev&quot; | xargs git branch -d&quot;
 </code></pre></div><h3 id="git-alias"><a href="#git-alias" class="header-anchor">#</a> git alias</h3> <p>Para ver todos los alias que has creado</p> <div class="language- extra-class"><pre class="language-text"><code>git config --global alias.da &quot;! git config --get-regexp ^alias\. | sed -e s/^alias\.// -e s/\ /\ =\ /&quot;
 </code></pre></div><h3 id="git-ac"><a href="#git-ac" class="header-anchor">#</a> git ac</h3> <p>El primero que vimos, para agregar y commitear en un solo comando.</p> <div class="language- extra-class"><pre class="language-text"><code>git config --global alias.ac &quot;! git add -A &amp;&amp; git commit -m&quot;
 </code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/code.html">
@@ -36,6 +35,6 @@
       </a>
       →
     </span></p></div> </main></div><div class="global-ui"></div></div>
-    <script src="/assets/js/app.a6b2cf8e.js" defer></script><script src="/assets/js/2.3f720234.js" defer></script><script src="/assets/js/7.0f7887e4.js" defer></script>
+    <script src="/assets/js/app.9a5c52d7.js" defer></script><script src="/assets/js/2.3f720234.js" defer></script><script src="/assets/js/7.3289f2a0.js" defer></script>
   </body>
 </html>
