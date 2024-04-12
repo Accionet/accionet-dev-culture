@@ -27,7 +27,7 @@
   
 #### Salir desde
   
-  Siempre salir desde `dev` jamás desde `master`:
+  Siempre salir desde `dev` jamás desde `master` o hay regla:
 
   ```
   git checkout -b myFeature dev
